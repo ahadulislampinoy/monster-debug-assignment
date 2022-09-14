@@ -29,7 +29,6 @@ const typeController = (e) => {
 
     return display.removeChild(display.lastChild);
   }
-
   // these are the valid character we are allowing to type
   const validLetters =
     "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ 1234567890!@#$%^&*()_+-={}[]'\".,?";
@@ -51,6 +50,7 @@ const typeController = (e) => {
     display.innerHTML += `<span class="red">${
       newLetter === " " ? "▪" : newLetter
     }</span>`;
+    errorCount++;
   }
 
   // check if given question text is equal to user typed text
@@ -108,7 +108,7 @@ const start = () => {
   // If already started, do not start again
   if (startTime) return;
 
-  let count = 0;
+  let count = 3;
   countdownOverlay.style.display = "flex";
 
   const startCountdown = setInterval(() => {
