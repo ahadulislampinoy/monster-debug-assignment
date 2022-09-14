@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed Monster Blogs</title>
+
+    <!-- bootstarp cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- external css -->
+    <link rel="stylesheet" href="blog.css">
+</head>
+
+<body>
+    <header class="container text-center pt-4 text-white">
+        <!-- heading title start -->
+        <h2>Welcome To <a class="text-decoration-none fw-bold text-white" href="#">Speed<span
+                    class="text-bg-success p-2 rounded-3">Monster</span></a> <span class="text-success">Blogs</span>
+        </h2>
+        <!-- heading title end -->
+    </header>
+    <main class="container">
+        <section class="d-flex justify-content-center pt-0 py-md-5 text-white">
+            <div class="w-100">
+                <div class="text-center pb-4">
+                    <h3>Most Asked Interview Questions</h3>
+                    <p class="pt-3">Read and prepare yourself for upcoming Interviews 🧑‍💻</p>
+                </div>
+                <!-- Accordion start -->
+                <div class="accordion accordion-custom" id="accordionExample">
+                    <div class="accordion-item text-white border-0">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button accordion-button-custom" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                                aria-controls="collapseOne">
+                                <h5 class="text-white">
+                                    Differences between local storage and session storage
+                                </h5>
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body accordion-body-custom lh-lg">
+                                The main difference is that local storage data does not expire, whereas session
+                                storage data gets cleared when the page session ends.
+
+                                Whenever a document is loaded in a particular tab in the browser, a
+                                unique
+                                page session gets created.
+                                Page sessions are valid for only one tab at a time. So, if a user has three tabs open,
+                                each one will have its own page session.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item text-white border-0">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button accordion-button-custom" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                                aria-controls="collapseTwo">
+                                <h5 class="text-white">
+                                    Differences between block scope and global scope
+                                </h5>
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body accordion-body-custom lh-lg">
+                                Variables declared Globally (outside of any function) have Global Scope and Global
+                                variables can be accessed and modifiyed from anywhere in a program are called Global
+                                Scope.
+                                Variables that are declared inside a { } block cannot be accessed from outside the block
+                                like if or switch conditions || inside for or while
+                                loops are Block scope. This is the main difference between this two blocks.
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item text-white border-0">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button accordion-button-custom" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                                aria-controls="collapseThree">
+                                <h5 class="text-white">
+                                    How JavaScript Event loop works
+                                </h5>
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body accordion-body-custom lh-lg">
+                                The event loop is the secret behind JavaScript’s asynchronous programming. JS executes
+                                all operations on a single thread, but using a few smart data structures, it gives
+                                us the
+                                illusion of
+                                multi-threading. Whenever an async function is called, it is sent to a browser API.
+                                Based on the command received from the call stack, the API starts its own
+                                single-threaded operation. It constantly checks whether or not the call stack is empty.
+                                If it is empty, new functions are added from the event queue. If it is not, then the
+                                current function call is processed.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item text-white border-0">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button accordion-button-custom" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                                aria-controls="collapseFour">
+                                <h5 class="text-white">
+                                    When does we get undefined in javascript?
+                                </h5>
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                            data-bs-parent="#accordionExample">
+                            <div class="accordion-body accordion-body-custom lh-lg">
+                                We get undefined 8 ways in javascript: when,
+                                <ol>
+                                    <li>Variable that is not initialized</li>
+                                    <li>Function with no returns</li>
+                                    <li>Parameter that is not passed will be undefined</li>
+                                    <li>If return
+                                        has nothing on the right side will return undefined</li>
+                                    <li>Property that does not exist on
+                                        an object will give undefined</li>
+                                    <li>Accessing the array element outside of the index range</li>
+                                    <li>Deleting an element inside an array</li>
+                                    <li>Set a value directly to undefined</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Accordion end -->
+            </div>
+        </section>
+    </main>
+    <!-- bootstarp cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

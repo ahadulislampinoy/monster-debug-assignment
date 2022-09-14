@@ -1,0 +1,14 @@
+body {
+  background-image: url("./bg.png");
+  background-size: cover;
+}
+.accordion-custom {
+  border: 2px solid #198754;
+  border-radius: 5px;
+}
+.accordion-body-custom {
+  background-color: rgb(23, 23, 23);
+}
+.accordion-button-custom {
+  background-color: rgb(33 36 33) !important;
+}
