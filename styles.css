@@ -17,7 +17,7 @@ body {
 }
 
 #question {
-  height: 100px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,10 +32,11 @@ body {
   );
   backdrop-filter: blur(5px);
   margin-bottom: 30px;
+  padding: 1.75rem 2rem;
 }
 
 #display {
-  height: 100px;
+  height: 100%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -45,6 +46,7 @@ body {
   background-color: #171717;
   border: 2px solid #9dffad;
   border-radius: 15px;
+  padding: 2.25rem 1.5rem;
 }
 
 #countdown {
@@ -148,7 +150,8 @@ button {
 #histories {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
+  grid-gap: 1.25rem;
+  padding-bottom: 1.5rem;
 }
 
 .card {
@@ -191,6 +194,9 @@ button {
     width: 100%;
   }
   .card {
-    flex-direction: column;
+    text-align: center;
+  }
+  #histories {
+    grid-template-columns: 1fr;
   }
 }
