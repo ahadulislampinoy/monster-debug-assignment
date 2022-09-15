@@ -32,7 +32,7 @@ body {
   );
   backdrop-filter: blur(5px);
   margin-bottom: 30px;
-  padding: 1.75rem 2rem;
+  padding: 2rem;
 }
 
 #display {
@@ -42,7 +42,7 @@ body {
   align-items: center;
   padding-left: 5rem;
   color: white;
-  font-size: 32px;
+  font-size: 30px;
   background-color: #171717;
   border: 2px solid #9dffad;
   border-radius: 15px;

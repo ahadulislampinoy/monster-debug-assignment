@@ -50,6 +50,7 @@ const typeController = (e) => {
     display.innerHTML += `<span class="red">${
       newLetter === " " ? "▪" : newLetter
     }</span>`;
+    // Increase mistake numbers
     errorCount++;
   }
 
@@ -105,6 +106,9 @@ const closeModal = () => {
 };
 
 const start = () => {
+  // When click the start button spending time calculation will be started
+  spendingTime();
+
   // If already started, do not start again
   if (startTime) return;
 
@@ -126,6 +130,8 @@ const start = () => {
     }
     count--;
   }, 1000);
+  // Clearning previous countdown
+  countdownOverlay.innerText = "";
 };
 
 // START Countdown
@@ -135,10 +141,13 @@ startBtn.addEventListener("click", start);
 displayHistory();
 
 // Show typing time spent
-setInterval(() => {
-  const currentTime = new Date().getTime();
-  const timeSpent = Math.floor((currentTime - startTime) / 1000);
-  document.getElementById("show-time").innerHTML = `${
-    startTime ? timeSpent : 0
-  } seconds`;
-}, 1000);
+const spendingTime = () => {
+  setInterval(() => {
+    const currentTime = new Date().getTime();
+    // Flooring the spending time
+    const timeSpent = Math.floor((currentTime - startTime) / 1000);
+    document.getElementById("show-time").innerHTML = `${
+      startTime ? timeSpent : 0
+    } seconds`;
+  }, 1000);
+};
