@@ -2,6 +2,13 @@ body {
   background-image: url("./bg.png");
   background-size: cover;
 }
+.title-blog-span {
+  color: #26ca7e;
+}
+.main-subheading {
+  color: #26ca7e;
+  font-weight: 500;
+}
 .accordion-custom {
   border: 2px solid #198754;
   border-radius: 5px;
