@@ -21,13 +21,17 @@ fetch("./texts.json")
 
 // checks the user typed character and displays accordingly
 const typeController = (e) => {
+  // Prevent the scroll when pressing spacebar
+  e.key == " " ? e.preventDefault() : "";
   const newLetter = e.key;
-
   // Handle backspace press
   if (newLetter == "Backspace") {
     userText = userText.slice(0, userText.length - 1);
 
-    return display.removeChild(display.lastChild);
+    // If display is empty then removeChild will not work
+    if (display.innerText != "") {
+      return display.removeChild(display.lastChild);
+    }
   }
   // these are the valid character we are allowing to type
   const validLetters =
@@ -144,6 +148,7 @@ displayHistory();
 const spendingTime = () => {
   setInterval(() => {
     const currentTime = new Date().getTime();
+    console.log(Math.floor(currentTime / 1000));
     // Flooring the spending time
     const timeSpent = Math.floor((currentTime - startTime) / 1000);
     document.getElementById("show-time").innerHTML = `${
